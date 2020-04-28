@@ -59,12 +59,12 @@ void CCSGOPlayerAnimState::SetupVelocity(CCSGOPlayerAnimState* state, C_BasePlay
 	if (state->speed_2d <= 0.0f)
 	{
 		state->timeSinceStartedMoving = 0.0f;
-		bWasMovingLastUpdate = state->t_since_stopped_moving <= 0.0f;
-		state->t_since_stopped_moving += state->anim_update_delta;
+		bWasMovingLastUpdate = state->TimeSinceStoppedMoving <= 0.0f;
+		state->TimeSinceStoppedMoving += state->anim_update_delta;
 	}
 	else
 	{
-		state->t_since_stopped_moving = 0.0f;
+		state->TimeSinceStoppedMoving = 0.0f;
 		bJustStartedMovingLastUpdate = state->timeSinceStartedMoving <= 0.0f;
 		state->timeSinceStartedMoving = state->anim_update_delta + state->timeSinceStartedMoving;
 	}
