@@ -3,7 +3,7 @@
 void CCSGOPlayerAnimState::SetupVelocity(CCSGOPlayerAnimState* state, C_BasePlayer* player)
 {
 
-	auto entindex = player->entindex() - 1;
+	auto entindex = player->entindex();
 
 	if (!(player->m_iEFlags() & 0x1000))
 		CBaseEntity::CalcAbsoluteVelocity((float *)player);
